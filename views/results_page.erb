@@ -1,0 +1,31 @@
+<center>
+<div class="box_div_results_page">
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<script src="/js/form.js"></script>
+</head>
+<body>
+<body onload = "checkCookies()">
+<p id="cookies"></p>
+<h1> Mike's Second Personal Details App </h1>
+<form method = "post" action = "results_page">
+<input type = "hidden" name = "first_name_input_box" value = "<%=first_name_input_box%>">
+<input type = "hidden" name = "last_name_input_box" value = "<%=last_name_input_box%>">
+<input type = "hidden" name = "favorite_animal" value = "<%=favorite_animal%>">
+<input type = "hidden" name = "favorite_color" value = "<%=favorite_color%>">
+<input type = "hidden" name = "favorite_first_number" value = "<%=favorite_first_number%>">
+<input type = "hidden" name = "favorite_second_number" value = "<%=favorite_second_number%>">
+<input type = "hidden" name = "favorite_third_number" value = "<%=favorite_third_number%>">
+<input type = "hidden" name = "math_operation" value = "<%=math_operation%>">
+<hr>
+<h3> Thanks, <%=first_name_input_box%> <%=last_name_input_box%>! To summarize, your favorite animal is a <%=favorite_animal%>, your favorite color is <%=favorite_color%>, your first favorite number is <%=favorite_first_number%>, your second favorite number is <%=favorite_second_number%>, your third favorite number is <%=favorite_third_number%>, and finally, the result of the <%=math_operation%> that you chose is <%=result_operation%>.</h3>
+<hr>
+<center>
+
+<hr>
+<br>
+</center>
+<br>
+</form>
+</body>
+</center>
