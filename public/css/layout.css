@@ -35,5 +35,16 @@ body {
 	border: 25px solid red;
 	padding: 120px;
 	margin: 25px;
-	height: 100%;
+	height: 55%;
+}
+.box_div_fav_animal_page {
+	font-size: 18px;
+	text-align: center;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.3);
+	width: 30%;
+	border: 25px solid red;
+	padding: 120px;
+	margin: 25px;
+	height: 45%;
 }

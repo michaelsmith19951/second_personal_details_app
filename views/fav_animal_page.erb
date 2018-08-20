@@ -1,5 +1,5 @@
 <center>
-<div class="box_div_main_page">
+<div class="box_div_fav_animal_page">
 <head>
 	<link rel="stylesheet" type="text/css" href="/css/layout.css">
 	<script src="/js/form.js"></script>
@@ -8,14 +8,12 @@
 <body onload = "checkCookies()">
 <p id="cookies"></p>
 <h1> Mike's Second Personal Details App </h1>
-<form method = "post" action = "main_page">
+<form method = "post" action = "fav_animal_page">
 <hr>
-<h3> Welcome! To get started, please enter your first and last name. </h3>
+<h3> Thanks, <%=first_name_input_box%> <%=last_name_input_box%>! Next, please tell me what your favorite animal is. </h3>
 <hr>
 <center>
-<input type="text" id="first" name = "first_name_input_box" placeholder="First Name" required onfocus>
-<br><br>
-<input type="text" id="last" name = "last_name_input_box" placeholder="Last Name" required>
+<input type="text" id="animal" name = "favorite_animal" placeholder="Favorite Animal" required onfocus>
 <hr>
 <br>
 <input class = "button" type = "submit" value = "Next" onclick>
