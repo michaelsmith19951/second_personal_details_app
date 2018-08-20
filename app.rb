@@ -1,4 +1,5 @@
 require "sinatra"
+require_relative "math_functions.rb"
 enable :sessions
 
 get '/' do
@@ -138,4 +139,59 @@ post '/fav_third_number_page' do
 	p "test that favorite_second_number is #{favorite_second_number} on post fav_third_number_page"
 	p "test that favorite_third_number is #{favorite_third_number} on post fav_third_number_page"
 	redirect '/math_operations_page?first_name_input_box=' + first_name_input_box + '&last_name_input_box=' + last_name_input_box + '&favorite_animal=' + favorite_animal + '&favorite_color=' + favorite_color + '&favorite_first_number=' + favorite_first_number + '&favorite_second_number=' + favorite_second_number + '&favorite_third_number=' + favorite_third_number
+end
+get '/math_operations_page' do
+	first_name_input_box = params[:first_name_input_box]
+	last_name_input_box = params[:last_name_input_box]
+	favorite_animal = params[:favorite_animal]
+	favorite_color = params[:favorite_color]
+	favorite_first_number = params[:favorite_first_number]
+	favorite_second_number = params[:favorite_second_number]
+	favorite_third_number = params[:favorite_third_number]
+	math_operation = params[:math_operation]
+	p "test that first_name_input_box is #{first_name_input_box} on get math_operations_page"
+	p "test that last_name_input_box is #{last_name_input_box} on get math_operationsr_page"
+	p "test that favorite_animal is #{favorite_animal} on get math_operations_pagee"
+	p "test that favorite_color is #{favorite_color} on get math_operations_page"
+	p "test that favorite_first_number is #{favorite_first_number} on get math_operations_page"
+	p "test that favorite_second_number is #{favorite_second_number} on get math_operations_page"
+	p "test that favorite_third_number is #{favorite_third_number} on get math_operations_page"
+	case math_operation
+	when "add"
+		math_operation = "+"
+	when "subtract"
+		math_operation = "-"
+	when "multiply"
+		math_operation = "*"
+	when "divide"
+		math_operation = "/"
+	end
+	erb :math_operations_page, locals:{first_name_input_box: params[:first_name_input_box], last_name_input_box: params[:last_name_input_box], favorite_animal: params[:favorite_animal], favorite_color: params[:favorite_color], favorite_first_number: params[:favorite_first_number], favorite_second_number: params[:favorite_second_number], favorite_third_number: params[:favorite_third_number]}
+end
+post '/math_operations_page' do
+	first_name_input_box = params[:first_name_input_box]
+	last_name_input_box = params[:last_name_input_box]
+	favorite_animal = params[:favorite_animal]
+	favorite_color = params[:favorite_color]
+	favorite_first_number = params[:favorite_first_number]
+	favorite_second_number = params[:favorite_second_number]
+	favorite_third_number = params[:favorite_third_number]
+	math_operation = params[:math_operation]
+	p "test that first_name_input_box is #{first_name_input_box} on post math_operations_page"
+	p "test that last_name_input_box is #{last_name_input_box} on post math_operationsr_page"
+	p "test that favorite_animal is #{favorite_animal} on post math_operations_pagee"
+	p "test that favorite_color is #{favorite_color} on post math_operations_page"
+	p "test that favorite_first_number is #{favorite_first_number} on post math_operations_page"
+	p "test that favorite_second_number is #{favorite_second_number} on post math_operations_page"
+	p "test that favorite_third_number is #{favorite_third_number} on post math_operations_page"
+	p "test that math_operation is #{math_operation} on post math_operations_page"
+	if math_operation == "+"
+		math_operation = "plus"
+	end
+	if math_operation == "/" && num2 == 0
+		p "You can't divide by zero"
+		nil
+	else
+	end
+	redirect '/final_page?first_name_input_box=' + first_name_input_box + '&last_name_input_box=' + last_name_input_box + '&favorite_animal=' + favorite_animal + '&favorite_color=' + favorite_color + '&favorite_first_number=' + favorite_first_number + '&favorite_second_number=' + favorite_second_number + '&favorite_third_number=' + favorite_third_number + '&math_operation=' + math_operation
 end
