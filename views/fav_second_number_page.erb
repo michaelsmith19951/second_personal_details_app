@@ -1,5 +1,5 @@
 <center>
-<div class="box_div_fav_first_number_page">
+<div class="box_div_fav_second_number_page">
 <head>
 	<link rel="stylesheet" type="text/css" href="/css/layout.css">
 	<script src="/js/form.js"></script>
@@ -8,16 +8,17 @@
 <body onload = "checkCookies()">
 <p id="cookies"></p>
 <h1> Mike's Second Personal Details App </h1>
-<form method = "post" action = "fav_first_number_page">
+<form method = "post" action = "fav_second_number_page">
 <input type = "hidden" name = "first_name_input_box" value = "<%=first_name_input_box%>">
 <input type = "hidden" name = "last_name_input_box" value = "<%=last_name_input_box%>">
 <input type = "hidden" name = "favorite_animal" value = "<%=favorite_animal%>">
 <input type = "hidden" name = "favorite_color" value = "<%=favorite_color%>">
+<input type = "hidden" name = "favorite_first_number" value = "<%=favorite_first_number%>">
 <hr>
-<h3> Thanks, <%=first_name_input_box%> <%=last_name_input_box%>! Your favorite color is <%=favorite_color%>. Next, please tell me what your first favorite number is. </h3>
+<h3> Thanks, <%=first_name_input_box%> <%=last_name_input_box%>! Your favorite first number is <%=favorite_first_number%>. Next, please tell me what your second favorite number is. </h3>
 <hr>
 <center>
-<input type="text" id="first_num" name = "favorite_first_number" placeholder="First Favorite Number" required onfocus>
+<input type="text" id="second_num" name = "favorite_second_number" placeholder="Second Favorite Number" required onfocus>
 <hr>
 <br>
 <input class = "button" type = "submit" value = "Next" onclick>
