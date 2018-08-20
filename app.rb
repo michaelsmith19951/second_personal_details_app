@@ -25,5 +25,27 @@ post '/fav_animal_page' do
 	p "test that first_name_input_box is #{first_name_input_box} on post fav_animal_page"
 	p "test that last_name_input_box is #{last_name_input_box} on post fav_animal_page"
 	p "test that favorite_animal is #{favorite_animal} on post fav_animal_page"
-	redirect '/fav_color'
+	redirect '/fav_color_page?first_name_input_box=' + first_name_input_box + '&last_name_input_box=' + last_name_input_box + '&favorite_animal=' + favorite_animal
+end
+get '/fav_color_page' do
+	first_name_input_box = params[:first_name_input_box]
+	last_name_input_box = params[:last_name_input_box]
+	favorite_animal = params[:favorite_animal]
+	favorite_color = params[:favorite_color]
+	p "test that first_name_input_box is #{first_name_input_box} on get fav_color_page"
+	p "test that last_name_input_box is #{last_name_input_box} on get fav_color_page"
+	p "test that favorite_animal is #{favorite_animal} on get fav_color_page"
+	p "test that favorite_color is #{favorite_color} on get fav_color_page"
+	erb :fav_color_page, locals:{first_name_input_box: params[:first_name_input_box], last_name_input_box: params[:last_name_input_box], favorite_animal: params[:favorite_animal], favorite_color: params[:favorite_color]}
+end
+post '/fav_color_page' do
+	first_name_input_box = params[:first_name_input_box]
+	last_name_input_box = params[:last_name_input_box]
+	favorite_animal = params[:favorite_animal]
+	favorite_color = params[:favorite_color]
+	p "test that first_name_input_box is #{first_name_input_box} on post fav_color_page"
+	p "test that last_name_input_box is #{last_name_input_box} on post fav_color_page"
+	p "test that favorite_animal is #{favorite_animal} on post fav_color_page"
+	p "test that favorite_color is #{favorite_color} on post fav_color_page"
+	redirect '/fav_first_number_page'
 end

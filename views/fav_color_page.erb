@@ -1,5 +1,5 @@
 <center>
-<div class="box_div_fav_animal_page">
+<div class="box_div_fav_color_page">
 <head>
 	<link rel="stylesheet" type="text/css" href="/css/layout.css">
 	<script src="/js/form.js"></script>
@@ -8,14 +8,15 @@
 <body onload = "checkCookies()">
 <p id="cookies"></p>
 <h1> Mike's Second Personal Details App </h1>
-<form method = "post" action = "fav_animal_page">
+<form method = "post" action = "fav_color_page">
 <input type = "hidden" name = "first_name_input_box" value = "<%=first_name_input_box%>">
 <input type = "hidden" name = "last_name_input_box" value = "<%=last_name_input_box%>">
+<input type = "hidden" name = "favorite_animal" value = "<%=favorite_animal%>">
 <hr>
-<h3> Thanks, <%=first_name_input_box%> <%=last_name_input_box%>! Next, please tell me what your favorite animal is. </h3>
+<h3> Thanks, <%=first_name_input_box%> <%=last_name_input_box%>! Your favorite animal is a <%=favorite_animal%>. Next, please tell me what your favorite color is. </h3>
 <hr>
 <center>
-<input type="text" id="animal" name = "favorite_animal" placeholder="Favorite Animal" required onfocus>
+<input type="text" id="color" name = "favorite_color" placeholder="Favorite Color" required onfocus>
 <hr>
 <br>
 <input class = "button" type = "submit" value = "Next" onclick>
